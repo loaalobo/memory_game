@@ -108,6 +108,18 @@ document.addEventListener('DOMContentLoaded', () => { // o evento DOMContentLoad
             setTimeout(checkForMatch, 500); // chamar a função que checa a combinação
         }
     }
+    
+    function welcomemsg() {
+        const welcomemsg = document.createElement('p');
+        welcomemsg.textContent = 'Welcome to the Memory Game!';
+        welcomemsg.classList.add('welcomemsg')
+        grid.appendChild(welcomemsg);
+    }
+    welcomemsg();
 
-    createBoard(); // chama a função que cria o tabuleiro do jogo (gostaria de criar um botão 'iniciar jogo')
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', () => {
+        grid.replaceChildren();
+        createBoard(); // chama a função que cria o tabuleiro do jogo (gostaria de criar um botão 'iniciar jogo')
+    })
 })
