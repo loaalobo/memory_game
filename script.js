@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => { // o evento DOMContentLoad
 
     // acessa os espaços que já criei no html tanto para o jogo em si quanto para a exibição do resultado
     const grid = document.querySelector('.grid');
-    const resultDisplay = document.querySelector('#result');
+    const resultDisplay = document.querySelector('#score');
 
     let cardsChosen = []; // cria uma lista para armazenar as 2 cartas escolhidas por rodada
     let cardsChosenId = []; // cria uma lista para armazenar os ids das 2 cartas escolhidas por rodada
@@ -109,11 +109,20 @@ document.addEventListener('DOMContentLoaded', () => { // o evento DOMContentLoad
         }
     }
     
-    function welcomemsg() {
+    /*function welcomemsg() {
         const welcomemsg = document.createElement('p');
-        welcomemsg.textContent = 'Welcome to the Memory Game!';
+        welcomemsg.textContent = 'Welcome to on board!';
         welcomemsg.classList.add('welcomemsg')
         grid.appendChild(welcomemsg);
+    }*/
+    function welcomemsg() {
+        const spacewelcomemsg = document.createElement('div');
+        spacewelcomemsg.classList.add('spacewelcomemsg');
+        const welcomemsg = document.createElement('p');
+        welcomemsg.classList.add('welcomemsg')
+        welcomemsg.textContent = 'Welcome to on board!';
+        grid.appendChild(spacewelcomemsg);
+        spacewelcomemsg.appendChild(welcomemsg);
     }
     welcomemsg();
 

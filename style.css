@@ -1,28 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Cabin Sketch', cursive;
     font-size: 20px;
     text-align: center;
 }
 
 h1 { 
-    font-family: 'Cabin Sketch', cursive; 
-    font-size: 50px; 
+    font-size: 3em; 
     font-weight: bold; 
-    margin-bottom: 1em; 
+    margin-bottom: 0.5em; 
     margin-top: 1em;
-}
-
-.welcomemsg {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2em;
-    background-color: blueviolet;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    height: 300px;
-    width: 400px;
 }
 
 .container {
@@ -34,6 +22,7 @@ h1 {
 }
 
 .grid {
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     /*height: 300px;
@@ -41,16 +30,48 @@ h1 {
     align-items: center;
 }
 
+.spacewelcomemsg {
+    font-size: 1.2em;
+    background: linear-gradient(to bottom, rgb(36, 72, 114), rgb(112, 151, 39));
+    color: white;
+    text-shadow: 1px 1px 10px black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    height: 300px;
+    width: 400px;
+}
+
+.welcomemsg {
+    margin-top: 5em;
+}
+
 img {
     width: 100px;
     height: 100px;
 }
 
-.result {
-    margin-top: 2em;
+#btn {
+    font-size: 0.7em;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    text-transform: uppercase;
+    background: rgb(112, 151, 39);
+    padding: 0.2em;
+    margin-top: 1.5em;
+}
+
+#btn:hover {
+    box-shadow: 1px 1px 5px black;
+    transition-duration: 0.2s;
+}
+
+.score {
+    font-size: 1.2em;
+    margin-top: 3em;
 }
 
 .footer {
     font-size: 14px;
-    margin-top: 5em;
+    margin-top: 3em;
 }
